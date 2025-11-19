@@ -40,12 +40,18 @@ html {
 
 .carousel-container {
   position: relative;
-  width: 800px;
+  aspect-ratio: 16 / 9;
+  width: 840px;
+  /* height: 520px; */
   margin: auto;
+  overflow: hidden;
+  background: #222;
 }
 .carousel-img {
   width: 100%;
+  height: 100%;
   display: none;
+  object-fit: cover;
 }
 .carousel-img:first-child {
   display: block;
@@ -89,6 +95,7 @@ html {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  gap: 160px;
 }
 
 .team-btn {
@@ -205,11 +212,14 @@ html {
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
+  gap: 15px;
 }
 
 .all-info .info-card {
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
+  width: 220px;
+  height: 140px;
   background-color: var(--second-bg-color);
   border-radius: 15px;
   box-shadow: 0px 0px 15px 1px rgba(192, 2, 2, 0.827);
@@ -236,14 +246,26 @@ html {
 .info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-top: 20px;
   padding: 20px;
 }
 .info h2 {
+  align-self: center;
   color: var(--gold-color);
   margin-bottom: 10px;
+}
+
+.info ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.info ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @layer base, demo;
