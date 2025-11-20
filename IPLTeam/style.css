@@ -22,20 +22,28 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 .header .heading {
   /* margin-top: 0.5rem; */
-  margin: 10px;
+  /* margin: 10px; */
+  margin-bottom: 20px;
   display: flex;
+  height: 130px;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   color: var(--gold-color);
   padding: 20px 0;
   background: var(--red-color);
-  border-radius: 2.5rem;
+  /* border-radius: 2.5rem; */
   box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heading img {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .carousel-container {
@@ -167,11 +175,7 @@ html {
   margin-top: 23px;
   font-size: 3rem;
   color: red;
-  background-image: linear-gradient(
-    190deg,
-    rgba(255, 0, 0, 0.1),
-    rgba(0, 0, 255, 0.105)
-  );
+  filter: drop-shadow(2px 2px 0.5px rgba(0, 0, 0, 0.567));
   border-radius: 5px;
   font-weight: bold;
 }
@@ -542,8 +546,20 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 50px;
+  gap: 150px;
   flex-wrap: wrap;
+}
+
+.sponsors .sponsor-logos img {
+  width: 600px;
+  padding: 20px;
+  margin: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sponsors .sponsor-logos img:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(5px 5px 3px rgba(229, 228, 224, 0.567));
 }
 
 .footer {
